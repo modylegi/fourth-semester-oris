@@ -3,7 +3,7 @@ package com.example.demo.controllers;
 import com.example.demo.entities.auth.AuthResponse;
 import com.example.demo.entities.auth.AuthenticateRequest;
 import com.example.demo.entities.auth.RegisterRequest;
-import com.example.demo.servicies.AuthService;
+import com.example.demo.services.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,4 +1,4 @@
-package com.example.demo.servicies.impl;
+package com.example.demo.services.impl;
 
 import com.example.demo.entities.auth.AuthResponse;
 import com.example.demo.entities.auth.AuthenticateRequest;
@@ -11,13 +11,11 @@ import com.example.demo.security.token.Token;
 import com.example.demo.security.token.TokenRepository;
 import com.example.demo.security.token.TokenType;
 import com.example.demo.security.utils.JwtUtil;
-import com.example.demo.servicies.AuthService;
+import com.example.demo.services.AuthService;
 import com.example.demo.validators.EmailValidator;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

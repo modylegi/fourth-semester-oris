@@ -3,8 +3,7 @@ package com.example.demo.security.config;
 
 
 import com.example.demo.security.filters.JwtAuthFilter;
-import com.example.demo.servicies.LogoutService;
-import lombok.AllArgsConstructor;
+import com.example.demo.services.LogoutService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

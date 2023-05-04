@@ -1,4 +1,4 @@
 package com.example.demo.dto;
 
-public class UserDto2 {
+public class OrderDto {
 }

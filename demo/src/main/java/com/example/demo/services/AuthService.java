@@ -1,4 +1,4 @@
-package com.example.demo.servicies;
+package com.example.demo.services;
 
 import com.example.demo.entities.auth.AuthResponse;
 import com.example.demo.entities.auth.AuthenticateRequest;

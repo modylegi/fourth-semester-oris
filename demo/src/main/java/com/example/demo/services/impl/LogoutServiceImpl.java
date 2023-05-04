@@ -1,8 +1,8 @@
-package com.example.demo.servicies.impl;
+package com.example.demo.services.impl;
 
 import com.example.demo.security.token.Token;
 import com.example.demo.security.token.TokenRepository;
-import com.example.demo.servicies.LogoutService;
+import com.example.demo.services.LogoutService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;

@@ -1,7 +1,9 @@
 package com.example.demo.entities.user;
 
+import com.example.demo.entities.Order;
 import com.example.demo.security.token.Token;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -61,23 +63,32 @@ public class User implements UserDetails {
             nullable = false,
             columnDefinition = "TEXT"
     )
+    @Email()
     private String email;
 
     @Column(
             name = "age",
-            nullable = false
+            nullable = false,
+            columnDefinition = "INTEGER"
 
     )
     private Integer age;
+
+    @Column(
+            name = "password",
+            nullable = false,
+            columnDefinition = "TEXT"
+
+    )
     private String password;
     @Enumerated(EnumType.STRING)
+    @NonNull
     private UserRole userRole;
     @OneToMany(mappedBy = "user")
     private List<Token> tokens;
-//    @OneToMany(mappedBy = "user")
-//    private List<Order> order;
-    private Boolean locked = false;
-    private Boolean enabled = false;
+    @OneToMany(mappedBy = "user")
+    private List<Order> order;
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -97,7 +108,7 @@ public class User implements UserDetails {
 
     @Override
     public boolean isAccountNonLocked() {
-        return !locked;
+        return true;
     }
 
     @Override
@@ -107,7 +118,7 @@ public class User implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return enabled;
+        return true;
     }
 
     @Override
